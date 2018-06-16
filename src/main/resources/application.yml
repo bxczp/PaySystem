@@ -1,0 +1,44 @@
+server:
+  port: 8080
+  
+  context-path: /
+    
+spring:
+   datasource:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/db_pay
+      username: root
+      password: 11
+   jpa:
+     hibernate.ddl-auto: update
+     show-sql: true
+      
+     
+#支付宝支付配置
+# APPID 商户appid 
+# RSA_PRIVATE_KEY 私钥 pkcs8格式的
+# notify_url 服务器异步通知页面路径 需http://或者https://格式的完整路径，不能加?id=123这类自定义参数，必须外网可以正常访问
+# return_url 页面跳转同步通知页面路径 需http://或者https://格式的完整路径，不能加?id=123这类自定义参数，必须外网可以正常访问 商户可以自定义同步跳转地址
+# URL 请求网关地址
+# CHARSET 编码
+# FORMAT 返回格式
+# ALIPAY_PUBLIC_KEY 支付宝公钥
+# SIGNTYPE RSA2
+
+alipayconfig: 
+
+   
+#微信支付配置
+# addid 公众账号ID
+# mch_id 商户号
+# device_info 设备号
+# key 商户的key【API密匙】
+# url api请求地址
+# notify_url 服务器异步通知页面路径
+
+weixinpayconfig: 
+
+
+   
+   
+   
